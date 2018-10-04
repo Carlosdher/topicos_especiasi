@@ -1,0 +1,23 @@
+{% extends '../iniciais/home.html' %}
+
+{% block content %}
+
+	<a href="{% url 'app:criar_forum' %}"><button class="butao_artes" >Criar seu Forum</button></a>
+	{% for object in object_list %}
+
+	<div class="lista_forum" >
+		<div class="questao">
+			<a href='{% url "app:participar" object.pk %}'><h3 class="titulo">{{object.assunto}}</h3></a>
+			<p class="assunto">{{object.descricao}}</p>
+		</div>
+		<div class='respostas'>
+			{% for resposta in respostas %}
+			<h4 class="titulo" >{{resposta.user}}</h4>
+			<p class="assunto" > {{resposta.mensagens}} </p>
+			{% endfor %}
+		</div>
+	
+	</div>
+	<a href="{% url 'app:criar_forum' %}"><button class="butao_resposta" >Responder</button></a>
+	{% endfor %}
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends '../iniciais/home.html' %}
+
+{% block content %}
+	
+	<a href="{% url 'app:criar_arte' %}"><button class="butao_artes" >Criar sua Arte</button></a>
+	
+		<div class='base' >
+			{% for teste in object %}
+		<div class='lista_anime' >
+			<div class="img" >
+			<img src="{{teste.foto.url}}" width="20%" height="100px">
+			</div>
+			<div class="descricao">
+				<h3 class="titulo" >Nome: {{teste.titulo}}</h3>
+				<p class="assunto" >Anime Base: {{teste.anime}}</p>
+				<p class="assunto" >Descrição: {{teste.descricao}}</p>
+			</div>
+
+	
+	</div>
+{% endfor %}
+
+{% endblock %}

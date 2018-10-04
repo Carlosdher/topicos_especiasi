@@ -1,0 +1,29 @@
+{% extends '../iniciais/home.html' %}
+{% load static %}
+{% block content %}
+	<div class='base' >
+		<div class='lista_anime' >
+			<div class="img" >
+			<img src="{% static 'imagens/boku.jpg' %}" width="20%" height="100px">
+			</div>
+			<div class="descricao">
+				<h3 class="titulo" >Nome: Boku No Hero</h3>
+				<p class="assunto" >Número de eps: 64</p>
+				<p class="assunto" >Sinopce e descrição: Boku no Hero Academia, também conhecido como My Hero Academia, é uma série de mangá escrita e ilustrada por Kōhei Horikoshi. Os capítulos do mangá são serializados na revista Weekly Shōnen Jump desde julho de 2014, e foram compilados em 14 volumes em formato tankōbon pela editora Shueisha</p>
+			</div>
+
+		</div>
+				<div class='lista_anime' >
+			<div class="img" >
+			<img src="{% static 'imagens/goku.jpg' %}" width="20%" height="100px">
+			</div>
+			<div class="descricao">
+				<h3 class="titulo" >Nome: Dragon Ball Z</h3>
+				<p class="assunto" >Número de eps: 236</p>
+				<p class="assunto" >Sinopce e descrição: Dragon Ball é uma franquia de mídia japonesa criada por Akira Toriyama. Originalmente iniciada com uma série de mangá que foi escrita e ilustrada por Toriyama, teve os seus capítulos serializados</p>
+			</div>
+
+		</div>
+		
+	</div>
+{% endblock %}

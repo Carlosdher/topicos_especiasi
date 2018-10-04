@@ -1,0 +1,14 @@
+{% extends '../iniciais/home.html' %}
+
+{% block content %}
+
+	{% for teste in respostas %}
+	<h1 style="color: #FFF;">{{teste}}</h1>
+	{% endfor %}
+
+	<form method="GET" >
+		<input type="text" name='resposta' id="resposta" >
+		<input type="hidden" name='obje' value="{{object}}">
+		<input type="submit" name="enviar" value="responder">
+	</form>
+{% endblock %}
